@@ -4,7 +4,7 @@ Donate link: http://qedev.com/
 Tags: audio, embed, html5, media, plugin, shortcode, video, youtube
 Requires at least: 3.0.1
 Tested up to: 4.0
-Stable tag: 1.0
+Stable tag: 1.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -32,7 +32,7 @@ The links search for and skip to a time in:
 
 You don't really need to do anything special to install this plugin. Just:
 
-1. Download using the button above, unzip and place the folder in your wp-content/plugins/ folder. Alternately, 
+1. Download using the button above, unzip and place the folder in your wp-content/plugins/ folder. Alternately,
 install using Wordpress' built-in plugin installer.
 1. Activate the plugin through the Plugins menu in WordPress
 1. Configure settings via Settings > Skip to Timestamp. Automatic timestamp replacement is turned off by default.
@@ -41,16 +41,16 @@ install using Wordpress' built-in plugin installer.
 = Will this work with ____ player? =
 If it adds an &lt;audio&gt; or &lt;video&gt; tag, then maybe. The plugin uses the currentTime parameter of those elements
 to set the location to skip to. If you open your browsers developer console and see a message saying
-'Skip to Timestamp: No media player found!', then that player isn't currently supported. I'd like to help you 
-though, so please submit a request for that player on the Wordpress plugin page. It's the only way I know 
-which players to prioritise! 
+'Skip to Timestamp: No media player found!', then that player isn't currently supported. I'd like to help you
+though, so please submit a request for that player on the Wordpress plugin page. It's the only way I know
+which players to prioritise!
 
 = Can I use both shortcodes and automatically-replaced timestamps? =
-Yes, as long as you don't use both in the same post. Each post can contain either shortcodes OR timestamps to 
+Yes, as long as you don't use both in the same post. Each post can contain either shortcodes OR timestamps to
 auto-replace. If both are present, then timestamps will not be automatically replaced.
 
 = It's not working! =
-Please leave me a message with information about the media you embedded, how you tried to create the link, and what 
+Please leave me a message with information about the media you embedded, how you tried to create the link, and what
 browser and operating system you're running. If it's a bug, I'll get right to work on it!
 
 == Screenshots ==
@@ -58,6 +58,12 @@ browser and operating system you're running. If it's a bug, I'll get right to wo
 2. Control the text of the link by using our [skipto] shortcode.
 
 == Changelog ==
+
+= 1.2 =
+* Added ability to turn off automatic linking on a per-page basis.
+
+= 1.1 =
+* Support for older versions of WordPress
 
 = 1.0 =
 * Initial release

@@ -23,7 +23,7 @@ The links search for and skip to a time in:
 
 You don't really need to do anything special to install this plugin. Just:
 
-1. Download using the button above, unzip and place the folder in your wp-content/plugins/ folder. Alternately, 
+1. Download using the button above, unzip and place the folder in your wp-content/plugins/ folder. Alternately,
 install using Wordpress' built-in plugin installer.
 1. Activate the plugin through the Plugins menu in WordPress
 1. Configure settings via Settings > Skip to Timestamp. Automatic timestamp replacement is turned off by default.

@@ -34,8 +34,8 @@ STTSkipTo = function(time) {
 		return;
 	}
 
-	if ((parseInt(STT.settings.link_audio) && audio.length) || 
-		(parseInt(STT.settings.link_video) && video.length)) 
+	if ((parseInt(STT.settings.link_audio) && audio.length) ||
+		(parseInt(STT.settings.link_video) && video.length))
 	{
 		STT.doSkip = STT.doHTML5Skip;
 
