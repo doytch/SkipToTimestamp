@@ -71,7 +71,7 @@ function qed_stt_shortcode($attr, $content) {
 	if ($time == -1) {
 		return $content;
 	} else {
-		return '<a href="javascript:void(0)" class="qed_stt_tslink" onclick="STTSkipTo(\'' . $time . '\')">' . $content . '</a>';
+		return "<span class=\"qed_stt_tslink\" data-stt-time=\"{$time}\">{$content}</span>";
 	}
 }
 
@@ -310,10 +310,21 @@ function qed_stt_hyperlink_timestamps($content) {
 
 	$content = preg_replace(
 		"/(?:(?:(?<hh>\d{1,2})[:.])?(?<mm>\d{1,2})[:.])(?<ss>\d{1,2})/",
-		'<a href="javascript:void(0)" class="qed_stt_tslink" onclick="STTSkipTo(\'$0\')">$0</a>',
+		'<span class="qed_stt_tslink" data-stt-time="$0">$0</span>',
 		$content
 	);
 
 	return $content;
+}
+
+add_action('wp_footer', 'qed_stt_custom_css');
+function qed_stt_custom_css() {
+?>
+    <style>
+    .qed_stt_tslink {
+        cursor: pointer;
+    }
+    </style>
+<?php
 }
 ?>
