@@ -45,8 +45,10 @@ STTSkipTo = function(time) {
 			STT.media = video[0];
 		}
 
+		var playbackRate = STT.media.playbackRate;
 		STT.media.addEventListener('canplaythrough', STT.doHTML5Skip);
 		STT.media.load();
+		STT.media.playbackRate = playbackRate;
 		STT.media.play();
 		return;
 	} else if (parseInt(STT.settings.link_youtube && iframe.length)) {
@@ -70,3 +72,14 @@ STTSkipTo = function(time) {
 	console.log('Skip to Timestamp: No media player found!');
 	return;
 }
+
+// Listen to all clicks on the document
+document.addEventListener('click', function (event) {
+    var elem = event.target;
+	// If the event target doesn't match bail
+	if (!elem.hasAttribute('data-stt-time')) {
+	    return;
+    }
+	var time = elem.getAttribute('data-stt-time');
+    STTSkipTo(time);
+}, false);
