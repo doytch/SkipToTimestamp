@@ -19,7 +19,7 @@ The links search for and skip to a time in:
 * HTML5 &lt;audio&gt; elements. Jetpack, Blubrry Powerpress and other plugins do this automatically using the [audio] shortcode.
 * HTML5 &lt;video&gt; elements. Jetpack and other plugins do this automatically using the [video] shortcode.
 
-##Installation##
+## Installation ##
 
 You don't really need to do anything special to install this plugin. Just:
 

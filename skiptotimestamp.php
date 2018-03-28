@@ -1,11 +1,11 @@
 <?php
 /*
 Plugin Name: Skip to Timestamp
-Plugin URI: http://qedev.com
+Plugin URI: http://github.com/doytch/SkipToTimestamp
 Description: Adds clickable timestamps via shortcode or search-and-replace that skip to a time in a media player.
-Version: 1.2
-Author: Mark Hurst Deutsch
-Author URI: http://qedev.com
+Version: 1.4
+Author: Mark Deutsch
+Author URI: http://github.com/doytch
 License: GPLv2
 */
 
@@ -41,7 +41,7 @@ function qed_stt_install() {
 /* --- Youtube --- */
 // Enable Youtube's Javascript API for videos embedded with Wordpress' builtin oembeds
 add_filter('oembed_result', 'qed_stt_enable_yt_jsapi');
-function qed_stt_enable_yt_jsapi($html, $url, $args) {
+function qed_stt_enable_yt_jsapi($html) {
 	if (strstr($html, 'youtube.com/embed/')) {
 		$html = str_replace('?feature=oembed', '?feature=oembed&enablejsapi=1', $html);
 	}

@@ -1,10 +1,10 @@
 === Plugin Name ===
 Contributors: doytch
-Donate link: http://qedev.com/
+Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=mark%2edeutsch%40utoronto%2eca&lc=US&item_name=Coffee%20Donation%20%3d%29&amount=10%2e00&currency_code=USD&button_subtype=services&bn=PP%2dBuyNowBF%3abtn_buynowCC_LG%2egif%3aNonHosted
 Tags: audio, embed, html5, media, plugin, shortcode, video, youtube
 Requires at least: 3.0.1
-Tested up to: 4.5
-Stable tag: 1.2
+Tested up to: 4.9.4
+Stable tag: 1.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -58,6 +58,14 @@ browser and operating system you're running. If it's a bug, I'll get right to wo
 2. Control the text of the link by using our [skipto] shortcode.
 
 == Changelog ==
+
+= 1.4 =
+* Fixed issue where playbackRate wouldn't be preserved.
+* Switched to dataset tags and global event handlers.
+* Thanks Lewis Cowles for the pull request!
+
+= 1.3 =
+* Housekeeping
 
 = 1.2 =
 * Added ability to turn off automatic linking on a per-page basis.
