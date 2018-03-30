@@ -310,7 +310,7 @@ function qed_stt_hyperlink_timestamps($content) {
 
 	$content = preg_replace(
 		"/(?:(?:(?<hh>\d{1,2})[:.])?(?<mm>\d{1,2})[:.])(?<ss>\d{1,2})/",
-		'<a href="javscript:void()" class="qed_stt_tslink" data-stt-time="$0">$0</a>',
+		'<a href="javascript:void()" class="qed_stt_tslink" data-stt-time="$0">$0</a>',
 		$content
 	);
 
