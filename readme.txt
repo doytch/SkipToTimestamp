@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=mark%2ed
 Tags: audio, embed, html5, media, plugin, shortcode, video, youtube
 Requires at least: 3.0.1
 Tested up to: 4.9.4
-Stable tag: 1.4.1
+Stable tag: 1.4.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -24,7 +24,7 @@ timestamps in the form "4:30" or "1:23:45" are automatically converted into link
 
 The links search for and skip to a time in:
 
-* Youtube videos embedded using Wordpress embeds.
+* Youtube videos embedded using Wordpress embeds. Make sure you're just pasting in the Youtube video link into your post editor and let WordPress embed things for you to ensure that the correct player is inserted into your post.
 * HTML5 &lt;audio&gt; elements. Jetpack, Blubrry Powerpress and other plugins do this automatically using the [audio] shortcode.
 * HTML5 &lt;video&gt; elements. Jetpack and other plugins do this automatically using the [video] shortcode.
 
@@ -58,6 +58,9 @@ browser and operating system you're running. If it's a bug, I'll get right to wo
 2. Control the text of the link by using our [skipto] shortcode.
 
 == Changelog ==
+
+= 1.4.4 = 
+* Fixed bug with autolinks on timestamps.
 
 = 1.4.1 =
 * Switched links back to <a> from <span>

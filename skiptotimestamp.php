@@ -3,7 +3,7 @@
 Plugin Name: Skip to Timestamp
 Plugin URI: http://github.com/doytch/SkipToTimestamp
 Description: Adds clickable timestamps via shortcode or search-and-replace that skip to a time in a media player.
-Version: 1.4.1
+Version: 1.4.4
 Author: Mark Deutsch
 Author URI: http://github.com/doytch
 License: GPLv2
