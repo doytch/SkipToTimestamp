@@ -3,7 +3,7 @@
 Plugin Name: Skip to Timestamp
 Plugin URI: http://github.com/doytch/SkipToTimestamp
 Description: Adds clickable timestamps via shortcode or search-and-replace that skip to a time in a media player.
-Version: 1.4
+Version: 1.4.1
 Author: Mark Deutsch
 Author URI: http://github.com/doytch
 License: GPLv2
@@ -71,7 +71,7 @@ function qed_stt_shortcode($attr, $content) {
 	if ($time == -1) {
 		return $content;
 	} else {
-		return "<span class=\"qed_stt_tslink\" data-stt-time=\"{$time}\">{$content}</span>";
+		return "<a href=\"javascript:void(0)\" class=\"qed_stt_tslink\" data-stt-time=\"{$time}\">{$content}</a>";
 	}
 }
 
@@ -310,7 +310,7 @@ function qed_stt_hyperlink_timestamps($content) {
 
 	$content = preg_replace(
 		"/(?:(?:(?<hh>\d{1,2})[:.])?(?<mm>\d{1,2})[:.])(?<ss>\d{1,2})/",
-		'<span class="qed_stt_tslink" data-stt-time="$0">$0</span>',
+		'<a href="javscript:void()" class="qed_stt_tslink" data-stt-time="$0">$0</a>',
 		$content
 	);
 

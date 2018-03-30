@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=mark%2ed
 Tags: audio, embed, html5, media, plugin, shortcode, video, youtube
 Requires at least: 3.0.1
 Tested up to: 4.9.4
-Stable tag: 1.4
+Stable tag: 1.4.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -58,6 +58,9 @@ browser and operating system you're running. If it's a bug, I'll get right to wo
 2. Control the text of the link by using our [skipto] shortcode.
 
 == Changelog ==
+
+= 1.4.1 =
+* Switched links back to <a> from <span>
 
 = 1.4 =
 * Fixed issue where playbackRate wouldn't be preserved.
