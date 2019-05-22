@@ -58,7 +58,7 @@ STTSkipTo = function(time) {
 				// Set up the JS interface
 				STT.doSkip = STT.doYoutubeSkip;
 
-				iframe[0].id = 'stt-youtube-player';
+				iframe[i].id = 'stt-youtube-player';
 				STT.media = new YT.Player('stt-youtube-player', {
 					events: {
 						onReady: STT.doYoutubeSkip
