@@ -3,8 +3,8 @@ Contributors: doytch
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=mark%2edeutsch%40utoronto%2eca&lc=US&item_name=Coffee%20Donation%20%3d%29&amount=10%2e00&currency_code=USD&button_subtype=services&bn=PP%2dBuyNowBF%3abtn_buynowCC_LG%2egif%3aNonHosted
 Tags: audio, embed, html5, media, plugin, shortcode, video, youtube
 Requires at least: 3.0.1
-Tested up to: 4.9.4
-Stable tag: 1.4.4
+Tested up to: 4.9.13
+Stable tag: 1.5.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -21,6 +21,16 @@ To create a link, either:
 Eg, "Just wait until...or...hold on, you can [skipto time=4:30]skip to[/skipto] this part of the video!"
 * Check the "Replace Timestamps Automatically" checkbox in the Settings > Skip to Timestamp, and watch as all your
 timestamps in the form "4:30" or "1:23:45" are automatically converted into links.
+
+If many media (audio, video, YouTube) exist in the same page, you can select among them:
+[skipto time=4:30 media-id=2]skip to[/skipto]
+For the 2nd media in the page.
+
+If the page contains a mix of media of different kind: audio, video or YouTube, you can select among them:
+[skipto time=2:37 media-type="video"]2:37[/skipto]
+[skipto time=5:56 media-id=2 media-type="audio"]5:56[/skipto]
+[skipto time=13:05 media-id=4 media-type="video"]13:05[/skipto]
+[skipto time=29:14 media-id=3 media-type="youtube"]29:14[/skipto]
 
 The links search for and skip to a time in:
 
@@ -58,6 +68,11 @@ browser and operating system you're running. If it's a bug, I'll get right to wo
 2. Control the text of the link by using our [skipto] shortcode.
 
 == Changelog ==
+
+= 1.5.0 =
+* Add possibility to select a media when many of them of a given type (audio, video or YouTube) exist on the same page
+* Add possibility to select among every existing media type in page (audio, video or YouTube)
+* Fix bug with YouTube frame
 
 = 1.4.4 = 
 * Fixed bug with autolinks on timestamps.

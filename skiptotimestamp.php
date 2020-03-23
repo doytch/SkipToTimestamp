@@ -3,7 +3,7 @@
 Plugin Name: Skip to Timestamp
 Plugin URI: http://github.com/doytch/SkipToTimestamp
 Description: Adds clickable timestamps via shortcode or search-and-replace that skip to a time in a media player.
-Version: 1.4.4
+Version: 1.5.0
 Author: Mark Deutsch
 Author URI: http://github.com/doytch
 License: GPLv2
@@ -67,11 +67,29 @@ function qed_stt_shortcode($attr, $content) {
 	} else if (isset($attr['ts'])) {
 		$time = $attr['ts'];
 	}
+	
+	$mediaId = -1;
+	if (isset($attr['media-id'])) {
+		$mediaId = $attr['media-id'];
+	}
+	
+	$mediaType = -1;
+	if (isset($attr['media-type'])) {
+		$mediaType = $attr['media-type'];
+	}
 
 	if ($time == -1) {
 		return $content;
 	} else {
-		return "<a href=\"javascript:void(0)\" class=\"qed_stt_tslink\" data-stt-time=\"{$time}\">{$content}</a>";
+	    if ($mediaId == -1 && $mediaType == -1) {
+		    return "<a href=\"javascript:void(0)\" class=\"qed_stt_tslink\" data-stt-time=\"{$time}\">{$content}</a>";
+	    } else {
+	        if ($mediaType == -1) {
+	            return "<a href=\"javascript:void(0)\" class=\"qed_stt_tslink\" data-stt-time=\"{$time}\" media-id=\"{$mediaId}\">{$content}</a>";
+	        } else {
+	            return "<a href=\"javascript:void(0)\" class=\"qed_stt_tslink\" data-stt-time=\"{$time}\" media-id=\"{$mediaId}\" media-type=\"{$mediaType}\">{$content}</a>";
+	        }
+	    }
 	}
 }
 

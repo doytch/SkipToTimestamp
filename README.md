@@ -12,6 +12,14 @@ To create a link, either:
 Eg, "Just wait until...or...hold on, you can [skipto time=4:30]skip to[/skipto] this part of the video!"
 * Check the "Replace Timestamps Automatically" checkbox in the Settings > Skip to Timestamp, and watch as all your
 timestamps in the form "4:30" or "1:23:45" are automatically converted into links.
+* If many media (audio, video, YouTube) exist in the same page, you can select among them:
+[skipto time=4:30 media-id=2]skip to[/skipto]
+For the 2nd media in the page.
+* If the page contains a mix of media of different kind: audio, video or YouTube, you can select among them:
+[skipto time=2:37 media-type="video"]2:37[/skipto]
+[skipto time=5:56 media-id=2 media-type="audio"]5:56[/skipto]
+[skipto time=13:05 media-id=4 media-type="video"]13:05[/skipto]
+[skipto time=29:14 media-id=3 media-type="youtube"]29:14[/skipto]
 
 The links search for and skip to a time in:
 
