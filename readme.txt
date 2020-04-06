@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=mark%2ed
 Tags: audio, embed, html5, media, plugin, shortcode, video, youtube
 Requires at least: 3.0.1
 Tested up to: 4.9.13
-Stable tag: 1.5.0
+Stable tag: 1.6.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -24,13 +24,30 @@ timestamps in the form "4:30" or "1:23:45" are automatically converted into link
 
 If many media (audio, video, YouTube) exist in the same page, you can select among them:
 [skipto time=4:30 media-id=2]skip to[/skipto]
-For the 2nd media in the page.
+For the 2nd media in the page (it is equivalent to the order in the page: 1st, 2nd...).
 
 If the page contains a mix of media of different kind: audio, video or YouTube, you can select among them:
 [skipto time=2:37 media-type="video"]2:37[/skipto]
 [skipto time=5:56 media-id=2 media-type="audio"]5:56[/skipto]
 [skipto time=13:05 media-id=4 media-type="video"]13:05[/skipto]
 [skipto time=29:14 media-id=3 media-type="youtube"]29:14[/skipto]
+
+A more convenient way to select a media is to refer to it using its URL. Media order is not robust to
+changes (adding or moving a media).
+[skipto time=5:56 url-media-contains="https://www.domain.com/path/myAudioFile.mp3" media-type="audio"]5:56[/skipto]
+[skipto time=13:05 url-media-contains="https://www.domain.com/path/myVideoFile.mp3" media-type="video"]13:05[/skipto]
+"url-media-contains" and "media-id" are not usable together.
+It is not necessary to give the whole URL:
+[skipto time=5:56 url-media-contains="myAudioFile.mp3" media-type="audio"]5:56[/skipto]
+[skipto time=13:05 url-media-contains="myVideoFile.mp3" media-type="video"]13:05[/skipto]
+Only a part of the URL may be enough, give the minimum necessary:
+[skipto time=5:56 url-media-contains="path1/myAudioFile.mp3" media-type="audio"]5:56[/skipto]
+[skipto time=5:56 url-media-contains="path2/myAudioFile.mp3" media-type="audio"]5:56[/skipto]
+
+For the YouTube case, you may have some trouble with the following:
+[skipto time=4:14 url-media-contains="https://www.youtube.com/watch?v=9ptyprXFPX0" media-type="youtube"]4:14[/skipto]
+Instead prefer:
+[skipto time=4:14 url-media-contains="9ptyprXFPX0" media-type="youtube"]4:14[/skipto]
 
 The links search for and skip to a time in:
 
@@ -68,6 +85,10 @@ browser and operating system you're running. If it's a bug, I'll get right to wo
 2. Control the text of the link by using our [skipto] shortcode.
 
 == Changelog ==
+
+= 1.6.0 =
+* Add media selection using URL
+* Bug fix: Unable to skip into another YouTube video once done in a given one.
 
 = 1.5.0 =
 * Add possibility to select a media when many of them of a given type (audio, video or YouTube) exist on the same page
